@@ -21,4 +21,5 @@
 -(IBAction)actionButtonForward:(UIBarButtonItem*)sender;
 -(IBAction)actionButtonRefresh:(UIBarButtonItem*)sender;
 
+-(IBAction)actionButtonCancel:(UIBarButtonItem*)sender;
 @end

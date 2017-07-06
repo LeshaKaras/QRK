@@ -20,6 +20,7 @@
 		7194E5A41EFAC27D00B39E2F /* QRK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7194E5A21EFAC27D00B39E2F /* QRK.xcdatamodeld */; };
 		7194E5A91EFAC27D00B39E2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7194E5A71EFAC27D00B39E2F /* LaunchScreen.storyboard */; };
 		7194E5B21EFAC46000B39E2F /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7194E5B11EFAC46000B39E2F /* StartViewController.m */; };
+		71AE80A61F0DB48E0024771B /* accept_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 71AE80A51F0DB48E0024771B /* accept_sound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		7194E5AA1EFAC27D00B39E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7194E5B01EFAC46000B39E2F /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartViewController.h; path = QRK/StartViewController.h; sourceTree = "<group>"; };
 		7194E5B11EFAC46000B39E2F /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartViewController.m; path = QRK/StartViewController.m; sourceTree = "<group>"; };
+		71AE80A51F0DB48E0024771B /* accept_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = accept_sound.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		714042711EFD804A00A3F9EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71AE80A51F0DB48E0024771B /* accept_sound.wav */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71AE80A61F0DB48E0024771B /* accept_sound.wav in Resources */,
 				7194E5A91EFAC27D00B39E2F /* LaunchScreen.storyboard in Resources */,
 				71063D3F1F06A08000087C57 /* Assets.xcassets in Resources */,
 				7194E5A11EFAC27D00B39E2F /* Main.storyboard in Resources */,

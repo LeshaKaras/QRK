@@ -131,7 +131,7 @@
                                 <items>
                                     <navigationItem title="Title" id="qA2-l5-d1i">
                                         <barButtonItem key="leftBarButtonItem" tag="1" systemItem="cancel" id="5U6-cN-o5c">
-                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="actionCancel:" destination="tk8-by-GCQ" id="hcG-8j-8HZ"/>
                                             </connections>
@@ -183,22 +183,28 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOv-Co-czX">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="bGC-4B-Rd2"/>
-                                    <constraint firstAttribute="height" constant="44" id="fcP-dJ-c7A"/>
+                                    <constraint firstAttribute="height" constant="44" id="8l7-L8-vf7"/>
+                                    <constraint firstAttribute="width" constant="375" id="BjE-Ag-AhG"/>
                                 </constraints>
                                 <items>
+                                    <barButtonItem style="done" systemItem="cancel" id="HqY-5T-3Df">
+                                        <connections>
+                                            <action selector="actionButtonCancel:" destination="6uf-Z5-hxT" id="Pof-TP-8Fr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="u77-fa-OL9"/>
                                     <barButtonItem systemItem="rewind" id="yRQ-Eq-GhT">
                                         <connections>
                                             <action selector="actionButtonBack:" destination="6uf-Z5-hxT" id="BJa-mu-sg8"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9dz-vH-zhV"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="O3D-ni-XYk"/>
                                     <barButtonItem systemItem="refresh" id="HqO-ks-2oZ">
                                         <connections>
                                             <action selector="actionButtonRefresh:" destination="6uf-Z5-hxT" id="pEV-DJ-93R"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Dqt-Sb-dla"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="e0E-O7-GT8"/>
                                     <barButtonItem systemItem="fastForward" id="PIx-fc-IXG">
                                         <connections>
                                             <action selector="actionButtonForward:" destination="6uf-Z5-hxT" id="cGB-G7-H1m"/>
@@ -213,14 +219,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="58G-yL-NPe" firstAttribute="top" secondItem="E4P-eL-vdB" secondAttribute="bottom" id="4If-sa-gWQ"/>
-                            <constraint firstItem="KOv-Co-czX" firstAttribute="leading" secondItem="ycW-cH-cfS" secondAttribute="leading" id="7Ga-aT-PPM"/>
-                            <constraint firstAttribute="trailing" secondItem="KOv-Co-czX" secondAttribute="trailing" id="8u0-va-BTj"/>
-                            <constraint firstItem="KOv-Co-czX" firstAttribute="top" secondItem="58G-yL-NPe" secondAttribute="bottom" id="B7H-fj-18d"/>
-                            <constraint firstItem="KOv-Co-czX" firstAttribute="top" secondItem="58G-yL-NPe" secondAttribute="bottom" id="VNP-LO-4bA"/>
-                            <constraint firstAttribute="trailing" secondItem="58G-yL-NPe" secondAttribute="trailing" id="bKG-fU-5gm"/>
-                            <constraint firstItem="58G-yL-NPe" firstAttribute="leading" secondItem="ycW-cH-cfS" secondAttribute="leading" id="gTF-ns-xnM"/>
-                            <constraint firstItem="pkJ-g2-oy1" firstAttribute="top" secondItem="KOv-Co-czX" secondAttribute="bottom" id="kzi-MT-6L4"/>
+                            <constraint firstItem="KOv-Co-czX" firstAttribute="leading" secondItem="ycW-cH-cfS" secondAttribute="leading" id="7hp-RL-6OG"/>
+                            <constraint firstItem="KOv-Co-czX" firstAttribute="top" secondItem="58G-yL-NPe" secondAttribute="bottom" id="Dqu-Ce-0Fj"/>
+                            <constraint firstAttribute="trailing" secondItem="58G-yL-NPe" secondAttribute="trailing" id="Syp-fd-AWz"/>
+                            <constraint firstItem="KOv-Co-czX" firstAttribute="top" secondItem="58G-yL-NPe" secondAttribute="bottom" id="W67-wa-Pmo"/>
+                            <constraint firstAttribute="trailing" secondItem="KOv-Co-czX" secondAttribute="trailing" id="Z2k-6v-qDu"/>
+                            <constraint firstItem="pkJ-g2-oy1" firstAttribute="top" secondItem="KOv-Co-czX" secondAttribute="bottom" id="fu1-rw-CuF"/>
+                            <constraint firstItem="58G-yL-NPe" firstAttribute="leading" secondItem="ycW-cH-cfS" secondAttribute="leading" id="ic5-bg-XY6"/>
+                            <constraint firstItem="58G-yL-NPe" firstAttribute="top" secondItem="E4P-eL-vdB" secondAttribute="bottom" id="uLz-s7-nWr"/>
                         </constraints>
                     </view>
                     <connections>
@@ -232,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXR-Dc-dkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="726" y="925"/>
+            <point key="canvasLocation" x="726" y="809"/>
         </scene>
         <!--Controller-->
         <scene sceneID="h2u-68-oZH">

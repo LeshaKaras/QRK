@@ -59,7 +59,12 @@ NSString * const ScanResultStringDidChangeNotification = @"ScanResultStringDidCh
     
     NSDate * date = [NSDate date];
     [[DataManagerQRK sharedManager] insertNewScanObject:self.scanResult scanDate:date];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self stopScanning];
+    
+    tableVC_QRK* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"tableQRK"];
+                       
+    [self presentViewController:vc animated:YES completion:nil];
     
 }
 
@@ -177,6 +182,8 @@ NSString * const ScanResultStringDidChangeNotification = @"ScanResultStringDidCh
     [device unlockForConfiguration];
 }
 -(IBAction) actionBackButton:(UIButton *)sender{
+    
+    [self stopScanning];
     
     tableVC_QRK* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"tableQRK"];
     

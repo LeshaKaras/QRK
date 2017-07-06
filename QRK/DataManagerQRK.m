@@ -91,5 +91,33 @@
     self.objectLoadWebView = stringUrl;
 }
 
+- (void) deleteObject:(ScanEntity*) object {
+    
+    NSFetchRequest* request = [[NSFetchRequest alloc]init];
+    
+    NSEntityDescription* descriptor = [NSEntityDescription entityForName:@"ScanEntity"
+                                                  inManagedObjectContext:self.persistentContainer.viewContext];
+    [request setEntity:descriptor];
+    
+    NSError* error = nil;
+    NSArray* array = [self.persistentContainer.viewContext executeFetchRequest:request
+                                                                         error:&error];
+    for (ScanEntity* obj in array) {
+        
+        if ([obj.stringName isEqualToString:object.stringName]) {
+            
+            if ([obj.dateCriatedObject isEqualToDate:object.dateCriatedObject]) {
+                
+                [self.persistentContainer.viewContext deleteObject:object];
+            }
+            
+        }
+        
+    }
+    
+    NSError* error1 = nil;
+    [self.persistentContainer.viewContext save:&error1];
+    
+}
 
 @end

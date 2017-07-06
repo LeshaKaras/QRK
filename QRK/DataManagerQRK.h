@@ -23,5 +23,6 @@
 -(void) insertNewScanObject: (NSString *) scan scanDate:(NSDate*)time;
 
 - (void) loadObjectSelected:(NSString*) stringUrl;
+- (void) deleteObject:(ScanEntity*) object;
 
 @end

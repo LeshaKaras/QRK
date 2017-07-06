@@ -23,6 +23,8 @@
     
     self.arrayData = [[DataManagerQRK sharedManager] dataQRK];
     self.navigBar.topItem.title = @"My scans";
+    [self.navigBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
     [self loadImages];
     
@@ -69,6 +71,9 @@
     dateFormatter.dateFormat = @"dd/MM HH:mm";
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Scan date: %@",
                                  [dateFormatter stringFromDate:object.dateCriatedObject]];
+    cell.backgroundColor = [UIColor blackColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.textColor = [UIColor whiteColor];
     return cell;
     
 }
@@ -83,6 +88,22 @@
     [self alert:object];
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    ScanEntity* object = [self.arrayData objectAtIndex:indexPath.row];
+    
+    [[DataManagerQRK sharedManager]deleteObject:object];
+    
+    self.arrayData = [[DataManagerQRK sharedManager] dataQRK];
+    
+    [tableView reloadData];
+    
+}
+
 #pragma mark - Action
 
 -(IBAction)actionCancel:(UINavigationBar*)sender {
@@ -93,7 +114,7 @@
 }
 
 - (void) actionButtonScan:(UIButton*) sender {
-
+    
     QRController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"cameraQRK"];
     
     [self presentViewController:vc animated:YES completion:nil];

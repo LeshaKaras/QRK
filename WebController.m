@@ -7,7 +7,7 @@
 //
 
 #import "WebController.h"
-
+#import "tableVC_QRK.h"
 @implementation WebController
 
 - (void) loadView {
@@ -54,6 +54,16 @@
 -(IBAction)actionButtonRefresh:(UIBarButtonItem*)sender{
     [self.webView stopLoading];
     [self.webView reload];
+}
+
+-(IBAction)actionButtonCancel:(UIBarButtonItem*)sender {
+    
+    [self.webView stopLoading];
+    
+    tableVC_QRK* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"tableQRK"];
+    
+    [self presentViewController:vc animated:YES completion:nil];
+    
 }
 
 #pragma  mark - Methods
